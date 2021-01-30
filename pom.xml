@@ -13,6 +13,7 @@
         <maven.compiler.target>15</maven.compiler.target>
     </properties>
     <dependencies>
+
         <dependency>
             <groupId>com.badlogicgames.gdx</groupId>
             <artifactId>gdx</artifactId>
@@ -20,16 +21,23 @@
         </dependency>
         <dependency>
             <groupId>com.badlogicgames.gdx</groupId>
-            <artifactId>gdx-platform</artifactId>
+            <artifactId>gdx-backend-lwjgl</artifactId>
             <version>1.9.13</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.badlogicgames.gdx</groupId>
-            <artifactId>gdx-backend-lwjgl</artifactId>
+            <artifactId>gdx-platform</artifactId>
+            <classifier>natives-desktop</classifier>
             <version>1.9.13</version>
-            <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.beachape/enumeratum -->
+        <dependency>
+            <groupId>com.beachape</groupId>
+            <artifactId>enumeratum_2.13</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
     </dependencies>
 
 </project>
