@@ -30,6 +30,31 @@
             <classifier>natives-desktop</classifier>
             <version>1.9.13</version>
         </dependency>
+        <!--Box2d-->
+        <dependency>
+            <groupId>com.badlogicgames.gdx</groupId>
+            <artifactId>gdx-box2d</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+        <dependency>
+            <groupId>com.badlogicgames.gdx</groupId>
+            <artifactId>gdx-box2d-platform</artifactId>
+            <classifier>natives-x86</classifier>
+            <version>1.9.13</version>
+        </dependency>
+        <dependency>
+            <groupId>com.badlogicgames.gdx</groupId>
+            <artifactId>gdx-box2d-parent</artifactId>
+            <version>1.9.13</version>
+            <type>pom</type>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.badlogicgames.gdx</groupId>-->
+<!--            <artifactId>gdx-box2d-gwt</artifactId>-->
+<!--            <version>1.9.13</version>-->
+<!--        </dependency>-->
+
+
 
         <!-- https://mvnrepository.com/artifact/com.beachape/enumeratum -->
         <dependency>

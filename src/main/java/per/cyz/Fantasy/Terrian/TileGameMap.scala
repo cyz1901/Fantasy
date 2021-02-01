@@ -38,8 +38,10 @@ class TileGameMap  {
   }
 
   def render(camera: OrthographicCamera): Unit = {
+
     batch.setProjectionMatrix(camera.combined)
     batch.begin
+    val start = System.currentTimeMillis
     for (layer <- 0 until getLayers) {
       for (row <- 0 until getHeight) {
         for (col <- 0 until getWidth) {
@@ -52,7 +54,9 @@ class TileGameMap  {
         }
       }
     }
-    batch.`end`
+    val end = System.currentTimeMillis
+    println("take time = " + (end - start))
+    batch.`end`()
   }
 
 }

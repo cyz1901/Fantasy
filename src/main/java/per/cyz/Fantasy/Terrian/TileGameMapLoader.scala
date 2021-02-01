@@ -52,18 +52,24 @@ object TileGameMapLoader {
     mapData.name = id
     mapData.map = Array.ofDim(2, SIZE, SIZE)
     val random = new Random()
-    for (row <- 0 until SIZE) {
-      for (col <- 0 until SIZE) {
+    val start = System.currentTimeMillis
+    //while 能比for 有更多的性能
+    var row = 0
+    var col = 0
+    while (row < SIZE) {
+      while (col < SIZE) {
         mapData.map(0)(row)(col) = BlockType.SKY.id
         if (row > SIZE - 3 - 1) {
           mapData.map(1)(row)(col) = BlockType.SOIL.id
-        }else {
-          if (random.nextInt(50) == 0)//1 chance out of 50 of being a cloud
+        } else {
+          if (random.nextInt(50) == 0) //1 chance out of 50 of being a cloud
             mapData.map(1)(row)(col) = BlockType.SOIL.id
         }
+        col += 1
       }
+      col = 0
+      row += 1
     }
-
     mapData
   }
 
